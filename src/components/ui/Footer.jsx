@@ -7,7 +7,7 @@ import logoFB from "../../assets/imgs/fb.svg";
 export function Footer() {
     return (
 
-        <footer className="bg-[#262626]">
+        <footer className="bg-[#262626] mt-32">
         <div className="flex flex-col pb-10">
             <a className="flex justify-center sm:justify-start m-20 " href="">
                 <img src="./img/logo.png" alt="" />

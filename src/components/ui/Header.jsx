@@ -1,5 +1,6 @@
 import '../../index.css'
 import logo from "../../assets/imgs/EVENT MATE.png";
+import { NavLink } from 'react-router-dom';
 
 export function Header() {
     return (
@@ -19,9 +20,9 @@ export function Header() {
                             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                         </svg>
                     </div>
-                    <a className="text-[#ffffff] font-second pt-2 xl:pt-4 2xl:pt-7" href="">Calendar</a>
-                    <a className="text-[#ffffff] font-second pt-2 xl:pt-4 2xl:pt-7" href="">Subjects</a>
-                    <a className="text-[#ffffff] font-second pt-2 xl:pt-4 2xl:pt-7" href="">Settings</a>
+                    <NavLink className="text-[#ffffff] font-second pt-2 xl:pt-4 2xl:pt-7" href="">Calendar</NavLink>
+                    <NavLink className="text-[#ffffff] font-second pt-2 xl:pt-4 2xl:pt-7" to={"/courses"}>Subjects</NavLink>
+                    <NavLink className="text-[#ffffff] font-second pt-2 xl:pt-4 2xl:pt-7" href="">Settings</NavLink>
                 </div>
             </nav>
         </header>
