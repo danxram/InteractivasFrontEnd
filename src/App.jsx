@@ -1,22 +1,31 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './input.css'
 import './App.css'
-import { Footer } from './components/ui/Footer'
-import { Header } from './components/ui/Header'
 import './index.css'
 
+import { Footer } from './components/ui/Footer'
+import { Header } from './components/ui/Header'
+import { Login } from "./components/routes/Login.jsx";
+import { SignUp } from "./components/routes/SignUp.jsx";
+import { CoursesMenu } from "./components/routes/CoursesMenu.jsx";
+import {Navigate, Routes, Route } from "react-router-dom";
+
 function App() {
-  
+
 
   return (
-<div className='w-[100%]'>
+    <div >
 
-    <Header/>
-    <Footer/>
+    <Routes>
 
-</div>
+      <Route path="/" element={<Login />} />
+      <Route path="/signUp" element={<SignUp/>} />
+      <Route path='/courses' element={<CoursesMenu/>} />
+
+
+    </Routes>
+  
+    </div>
   )
 }
 
