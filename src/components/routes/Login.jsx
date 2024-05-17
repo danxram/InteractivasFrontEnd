@@ -57,7 +57,7 @@ export function Login() {
                                 <NavLink to="/signUp"
                                     className="text-blue-500 hover:underline ff-main text-lg md:text-xl lg:text-2xl">Don’t have?
                                     Sign Up</NavLink>
-                                <NavLink to="/"
+                                <NavLink to="/homePage"
                                     className="text-blue-500 hover:underline ff-main text-md md:text-lg lg:text-2xl">Forgot
                                     Password?</NavLink>
                             </div>
