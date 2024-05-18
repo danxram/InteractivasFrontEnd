@@ -9,6 +9,7 @@ import { Login } from "./components/routes/Login.jsx";
 import { SignUp } from "./components/routes/SignUp.jsx";
 import { HomePage } from "./components/routes/HomePage.jsx";
 import { CoursesMenu } from "./components/routes/CoursesMenu.jsx";
+import {FormsInfo} from "./components/routes/FormsInfo.jsx"
 import {Navigate, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route path="/signUp" element={<SignUp/>} />
       <Route path='/courses' element={<CoursesMenu/>} />
       <Route path='/homePage' element={<HomePage/>} />
+      <Route path='/formsInfo' element={<FormsInfo/>} />
 
 
     </Routes>
