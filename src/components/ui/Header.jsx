@@ -1,12 +1,13 @@
 import '../../index.css'
 import logo from "../../assets/imgs/EVENT MATE.png";
 import { NavLink } from 'react-router-dom';
+import { Divider, Dropdown, Button } from 'keep-react'
 
 export function Header() {
     return (
         <header>
             <nav className="flex bg-[#0F345F] w-full h-[10vh] lg:h-[12vh] pt-6 pb-6">
-                <img className=" pl-9" src={logo} alt="Logo Event Mate" />
+                <img className="pl-9" src={logo} alt="Logo Event Mate" />
                 <div className="hidden lg:flex flex-row-reverse w-full gap-7 pr-9">
                     <div className="flex bg-[#274F7E] rounded-full p-1.5 2xl:p-3">
                         {/* Cambiar este svg por foto de perfil? */}
@@ -24,6 +25,21 @@ export function Header() {
                     <NavLink className="text-[#ffffff] font-second pt-2 xl:pt-4 2xl:pt-7" to={"/courses"}>Subjects</NavLink>
                     <NavLink className="text-[#ffffff] font-second pt-2 xl:pt-4 2xl:pt-7" href="">Settings</NavLink>
                 </div>
+                <div className="flex lg:hidden pr-9 pt-1">
+                    <Dropdown action={<Button size='sm' className='bg-[#7D9FC7]'>Menu </Button>} actionClassName="border-none bg-[#0F345F] flex order-last items-center object-right">
+                        <Dropdown.List>
+                            <Dropdown.Item>                    
+                                    <input type="search" placeholder="Search" className="bg-[#7D9FC7] text-[#ffffff] placeholder:text-[#ffffff] rounded-xl pl-4" />
+                            </Dropdown.Item>
+                            <Dropdown.Item><NavLink className="text-[#274F7E] font-second" to={"/courses"}>Subjects</NavLink></Dropdown.Item>
+                            <Dropdown.Item><NavLink className="text-[#274F7E] font-second" to={""}>Calendar</NavLink></Dropdown.Item>
+                            <Divider color="primary"/>
+                            <Dropdown.Item><NavLink className="text-[#274F7E] font-second" to={""}>User Porfile</NavLink></Dropdown.Item>
+                            <Dropdown.Item><NavLink className="text-[#274F7E] font-second" to={""}>Settings</NavLink></Dropdown.Item>
+                        </Dropdown.List>
+                    </Dropdown>
+                </div>
+
             </nav>
         </header>
     )
