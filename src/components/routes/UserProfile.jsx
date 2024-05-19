@@ -5,7 +5,7 @@ export function UserProfile() {
     return (
         <>
 
-            <div className='flex flex-col w-screen h-full min-h-screen justify-center'>
+            <div className='flex flex-col w-auto h-full min-h-screen justify-center'>
                 <div className='flex flex-col w-11/12 m-auto p-14 border-2 rounded-3xl divide-y-2 divide'>
 
                     <div className='flex'>
@@ -15,7 +15,7 @@ export function UserProfile() {
                                 src='https://holatelcel.com/wp-content/uploads/2022/08/hombre-estudiante-universitario-696x696.jpg'
                                 alt='pfp' />
                             <div className='flex flex-col my-auto p-8'>
-                                <p id='username' className='text-6xl relative bottom-0'>José Rodríguez</p>
+                                <p id='username' className='text-6xl relative py-5'>José Rodríguez</p>
                                 <div className='flex divide divide-x-2'>
                                     <p className='pr-8'>Estudiante</p>
                                     <p className='pl-8'>rodjosmaster@gmail.com</p>
