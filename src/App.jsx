@@ -13,6 +13,7 @@ import {FormsInfo} from "./components/routes/FormsInfo.jsx"
 import {Navigate, Routes, Route } from "react-router-dom";
 import {Statistics}from './components/routes/Statistics.jsx'
 import {UserProfile}from './components/routes/UserProfile.jsx'
+import { SearchResult } from './components/routes/SearchResult.jsx'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
       <Route path='/courses' element={<CoursesMenu/>} />
       <Route path='/homePage' element={<HomePage/>} />
       <Route path='/formsInfo' element={<FormsInfo/>} />
+      <Route path='/searchResult' element={<SearchResult/>} />
       
       <Route path='/userprofile' element={<UserProfile/>} />
       
