@@ -10,7 +10,7 @@ export function Statistics() {
                 <div className="bg-gray-300 w-full h-1"></div>
             </div>
             <div className="flex flex-col">
-                <h2 className="text-[#274F7E] text-5xl font-bold py-10">GRAPHS</h2>
+                <h2 className="text-[#274F7E] text-5xl font-bold py-10 ml-0 mr-auto">GRAPHS</h2>
                 <div className="flex py-10 divide-x-2">
 
 
@@ -35,9 +35,9 @@ export function Statistics() {
                         </div>
                     </div>
                 </div>
-                <h2 className="text-[#274F7E] text-5xl font-bold py-10">DAILY</h2>
+                <h2 className="text-[#274F7E] text-5xl font-bold py-10 ml-0 mr-auto">DAILY</h2>
                 <div className="flex py-10"></div>
-                <h2 className="text-[#274F7E] text-5xl font-bold py-10">WEEKLY</h2>
+                <h2 className="text-[#274F7E] text-5xl font-bold py-10 ml-0 mr-auto">WEEKLY</h2>
                 <div className="flex py-10"></div>
 
 
