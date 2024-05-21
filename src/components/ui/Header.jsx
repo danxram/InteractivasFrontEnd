@@ -25,7 +25,7 @@ export function Header() {
                     <NavLink className="text-[#ffffff] font-second pt-2 xl:pt-4 2xl:pt-7" to={"/courses"}>Subjects</NavLink>
                     <NavLink className="text-[#ffffff] font-second pt-2 xl:pt-4 2xl:pt-7" href="">Settings</NavLink>
                 </div>
-                <div className="flex lg:hidden pr-9 pt-1">
+                <div className="flex sm:hidden pr-9 pt-1 flex-row-reverse">
                     <Dropdown action={<Button size='sm' className='bg-[#7D9FC7]'>Menu </Button>} actionClassName="border-none bg-[#0F345F] flex order-last items-center object-right">
                         <Dropdown.List>
                             <Dropdown.Item>                    
