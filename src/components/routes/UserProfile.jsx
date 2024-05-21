@@ -78,7 +78,6 @@ UserProfile.propTypes = {
     userPfp: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
     userBio: PropTypes.string.isRequired,
-    userKeywords: PropTypes.string.isRequired,
     userEmail: PropTypes.string.isRequired,
     userJoined: PropTypes.string.isRequired,
     userType: PropTypes.string.isRequired,
