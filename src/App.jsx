@@ -14,6 +14,7 @@ import {Navigate, Routes, Route } from "react-router-dom";
 import {Statistics}from './components/routes/Statistics.jsx'
 import {UserProfile}from './components/routes/UserProfile.jsx'
 import { SearchResult } from './components/routes/SearchResult.jsx'
+import { CourseEvents } from "./components/routes/CourseEvents.jsx";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
       <Route path='/homePage' element={<HomePage/>} />
       <Route path='/formsInfo' element={<FormsInfo/>} />
       <Route path='/searchResult' element={<SearchResult/>} />
+      <Route path="/courseEvents" element={<CourseEvents/>} />
       
       <Route path='/userprofile' element={<UserProfile/>} />
       

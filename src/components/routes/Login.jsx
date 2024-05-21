@@ -90,7 +90,7 @@ export function Login() {
 
                             <div className="mb-6 flex justify-between text-center w-[60%]">
                                 <NavLink to="/signUp" className="text-blue-500 hover:underline ff-main text-lg md:text-xl lg:text-2xl">
-                                    Don’t have? Sign Up
+                                    Sign Up
                                 </NavLink>
                                 <NavLink to="/homePage" className="text-blue-500 hover:underline ff-main text-md md:text-lg lg:text-2xl">
                                     Forgot Password?
