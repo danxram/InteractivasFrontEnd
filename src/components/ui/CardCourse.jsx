@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 import "../../index.css";
+import { NavLink } from "react-router-dom";
 
 export function CardCourse({imageCourse, titleCourse}) {
     return (
@@ -15,8 +16,9 @@ export function CardCourse({imageCourse, titleCourse}) {
             <div class="px-4 pb-4  w-full flex items-center justify-center h-[25vh] border-t-[1px] border-gray-500 border-solid">
                 <div class="my-4 flex flex-col text-center items-center w-full">
                     <h2 class="text-[#426B9A] text-lg md:text-xl lg:text-2xl font-bold mb-4 md:mb-6 lg:mb-0">{titleCourse}</h2>
-                    <button type="submit"
-                        class="w-[70%] py-1 md:py-2 lg:py-2 mt-2 md:mt-4 lg:mt-3 bg-[#C94545] text-white font-medium text-lg md:text-xl lg:text-2xl rounded-md hover:bg-[#C94545]/90 transition duration-300 ff-main">ACCESS</button>
+                    <NavLink to="/courseEvents" type="submit"
+                        className="w-[70%] py-1 md:py-2 lg:py-2 mt-2 md:mt-4 lg:mt-3 bg-[#C94545] text-white font-medium text-lg md:text-xl lg:text-2xl rounded-md hover:bg-[#C94545]/90 hover:text-white transition duration-300">ACCESS</NavLink>
+                        
                 </div>
             </div>
         </div>
