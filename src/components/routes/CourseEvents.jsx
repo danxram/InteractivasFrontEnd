@@ -20,27 +20,27 @@ export function CourseEvents() {
         <>
         <div className="bg-white">
         <Header />
-        <h1 class="text-3xl md:text-5xl lg:text-5xl  font-bold text-center text-[#0F345F] mt-16 mb-12 ff-main uppercase">
+        <h1 className="text-3xl md:text-5xl lg:text-5xl  font-bold text-center text-[#0F345F] mt-16 mb-12 ff-main uppercase">
         Courses</h1>
     {/*filters */}
-        <div class="flex-row">
-        <div class="flex justify-center gap-3">
-            <button class="w-full h-full justify-center rounded-t-lg  inline-flex bg-[#0F345F] hover:bg-[#7D9FC7]">
-                <p class="text-[#ffffff] text-lg font-main pt-2 self-center font-semibold">ALL</p>
+        <div className="flex-row">
+        <div className="flex justify-center gap-3">
+            <button className="w-full h-full justify-center rounded-t-lg  inline-flex bg-[#0F345F] hover:bg-[#7D9FC7]">
+                <p className="text-[#ffffff] text-lg font-main pt-2 self-center font-semibold">ALL</p>
             </button>
-            <button class="w-full h-full justify-center rounded-t-lg  inline-flex bg-[#0F345F] hover:bg-[#7D9FC7]">
-                <p class="text-[#ffffff] text-lg font-main pt-2 self-center font-semibold">TASK</p>
+            <button className="w-full h-full justify-center rounded-t-lg  inline-flex bg-[#0F345F] hover:bg-[#7D9FC7]">
+                <p className="text-[#ffffff] text-lg font-main pt-2 self-center font-semibold">TASK</p>
             </button>
-            <button class="w-full h-full justify-center rounded-t-lg  inline-flex bg-[#0F345F] hover:bg-[#7D9FC7]">
-                <p class="text-[#ffffff] text-lg font-main pt-2 self-center font-semibold">EVENT</p>
+            <button className="w-full h-full justify-center rounded-t-lg  inline-flex bg-[#0F345F] hover:bg-[#7D9FC7]">
+                <p className="text-[#ffffff] text-lg font-main pt-2 self-center font-semibold">EVENT</p>
             </button>
-            <button class="w-full h-full justify-center rounded-t-lg  inline-flex bg-[#0F345F] hover:bg-[#7D9FC7]">
-                <p class="text-[#ffffff] text-lg font-main pt-2 self-center font-semibold">NOTICE</p>
+            <button className="w-full h-full justify-center rounded-t-lg  inline-flex bg-[#0F345F] hover:bg-[#7D9FC7]">
+                <p className="text-[#ffffff] text-lg font-main pt-2 self-center font-semibold">NOTICE</p>
             </button>
         </div>
 
     {/*container*/}
-    <div class="w-full h-full p-6 bg-[#7D9FC7]"> 
+    <div className="w-full h-full p-6 bg-[#7D9FC7]"> 
     <EventContainer items={events}/>
     </div>
         </div>

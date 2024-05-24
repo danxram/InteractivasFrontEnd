@@ -22,7 +22,7 @@ export function Header() {
                                 setPosition(position);
                             }}
                             color="secondary"
-                            className="bg-[#C94545] hover:bg-[#C94545]/90 text-white font-semibold text-sm md:text-base lg:text-xl capitalize px-6 py-3 md:px-10 md:py-5 lg:px-8 ">
+                            className="bg-[#274F7E] text-white font-semibold text-sm md:text-base lg:text-xl capitalize px-6 py-3 md:px-10 md:py-5 lg:px-8 ">
                             Menu
                         </Button>
                     ))}
