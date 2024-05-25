@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import { Header } from "../ui/Header";
+import { Footer } from "../ui/Footer";
 
-
-export function UserProfile({userPfp, username, userType, userBio, userKeyWord, userEmail, userJoined}) {
+export function UserProfile({ userPfp, username, userType, userBio, userKeyWord, userEmail, userJoined }) {
     return (
         <>
-
+            <Header />
             <div className='flex flex-col w-auto h-full min-h-screen justify-center'>
                 <div className='flex flex-col w-11/12 m-auto p-14 border-2 rounded-3xl divide-y-2 divide'>
-
                     <div className='flex'>
-
                         <div className='flex pb-8'>
                             <img className='rounded-2xl w-56 min-h-56 object-cover'
                                 src={`${userPfp}`}
@@ -22,25 +21,9 @@ export function UserProfile({userPfp, username, userType, userBio, userKeyWord, 
                                     <p className='pl-8'>{userEmail}</p>
                                 </div>
                             </div>
-
-
-
                         </div>
-
-                        <div className='flex gap-4 ml-auto mr-0'>
-                            <img className='size-12' src='https://icones.pro/wp-content/uploads/2021/04/icone-cercle-gris.png'
-                                alt='' />
-                            <img className='size-12' src='https://icones.pro/wp-content/uploads/2021/04/icone-cercle-gris.png'
-                                alt='' />
-                            <img className='size-12' src='https://icones.pro/wp-content/uploads/2021/04/icone-cercle-gris.png'
-                                alt='' />
-                            <img className='size-12' src='https://icones.pro/wp-content/uploads/2021/04/icone-cercle-gris.png'
-                                alt='' />
-                        </div>
+                        
                     </div>
-
-
-
                     <div className='flex gap-16 py-8'>
                         <div className='w-1/3'>
                             <p className='text-[#426B9A]'>Joined:</p>
@@ -56,18 +39,14 @@ export function UserProfile({userPfp, username, userType, userBio, userKeyWord, 
                         </div>
                     </div>
                     <div className='w-full flex gap-8 pt-8'>
-                    <button
-                        className='border border-[#426B9A] w-48 h-14 rounded-xl text-[#426B9A] text-lg hover:bg-[#426B99] hover:text-white'>Información</button>
-                    <button
-                        className='border border-[#426B9A] w-48 h-14 rounded-xl text-[#426B9A] text-lg hover:bg-[#426B99] hover:text-white'>Más</button>
+                        <button
+                            className='border border-[#426B9A] w-48 h-14 rounded-xl text-[#426B9A] text-lg hover:bg-[#426B99] hover:text-white'>Información</button>
+                        <button
+                            className='border border-[#426B9A] w-48 h-14 rounded-xl text-[#426B9A] text-lg hover:bg-[#426B99] hover:text-white'>Más</button>
+                    </div>
                 </div>
-                </div>
-
-                
-
             </div>
-
-
+            <Footer />
         </>
 
 
