@@ -8,11 +8,8 @@ export function Footer() {
     return (
 
         <footer className="bg-[#262626] mt-32 w-full">
-        <div className="flex flex-col pb-10">
-            <a className="flex justify-center sm:justify-start m-20 " href="">
-                <img src="./img/logo.png" alt="" />
-            </a>
-            <div className="flex flex-row justify-center gap-11 sm:gap-24">
+        <div className="flex flex-col pb-2">
+            <div className="flex flex-row justify-center mt-16 gap-11 sm:gap-24">
                 <a href="">
                     <img src={logoYT} alt="yt-logo" />
                 </a>
