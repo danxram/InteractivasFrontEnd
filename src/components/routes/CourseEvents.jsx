@@ -11,8 +11,6 @@ export function CourseEvents() {
         {"id": 4, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description:"Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date:"22/02/24"},
         {"id": 5, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description:"Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date:"22/02/24"},
         {"id": 6, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description:"Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date:"22/02/24"},
-        {"id": 7, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description:"Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date:"22/02/24"},
-        {"id": 8, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description:"Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date:"22/02/24"},
     ]
 
 
@@ -40,8 +38,14 @@ export function CourseEvents() {
         </div>
 
     {/*container*/}
-    <div className="w-full h-full p-6 bg-[#7D9FC7]"> 
+    <div className="w-full h-full p-6 bg-[#7D9FC7]">
+    <div className="flex w-auto justify-center mx-9">
+                <h3 className="text-[#0F345F] font-main font-bold text-4xl tracking-widest text-center">EVENT OVERVIEW</h3>
+            </div>
     <EventContainer items={events}/>
+    <div className="flex justify-center mb-6 sm:mb-14">
+                <a className="font-main text-4xl font-bold py-5 px-10 xl:px- 2xl:px-24 bg-[#0F345F] rounded-lg text-[#ffffff]" href="">Show More</a>
+            </div>
     </div>
         </div>
         <Footer />
