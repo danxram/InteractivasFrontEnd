@@ -4,6 +4,7 @@ import { CompletedEventsContainer } from '../activity/CompletedEventsContainer';
 import "../../index.css";
 import { Footer } from '../ui/Footer';
 import { Header } from '../ui/Header';
+import { EventContainer } from '../activity/EventContainer';
 
 
 
@@ -30,7 +31,8 @@ export function Statistics() {
         </div>
 
         <GraphsContainer items={progressGraph}/>
-        <CompletedEventsContainer items={events}/>
+        {/* <CompletedEventsContainer items={events}/> */}
+        <EventContainer items={events} />
 
 
         <Footer />
