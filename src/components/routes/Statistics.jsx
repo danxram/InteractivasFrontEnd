@@ -9,6 +9,10 @@ import { Header } from '../ui/Header';
 
 export function Statistics() {
 
+    const progressGraph = [
+        {'id':1, 'progressNumber':55}
+    ]
+
     const events = [
         {'id':1, 'eventName': 'Event 1', 'description': 'Description 1', 'date': '00/00/2024', 'imageEvent': 'https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain', 'type': 'Event'},
         {'id':2, 'eventName': 'Event 2', 'description': 'Description 2', 'date': '00/00/2024', 'imageEvent': 'https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain', 'type': 'Task'},
@@ -25,7 +29,7 @@ export function Statistics() {
                 <div className='bg-gray-300 w-full h-1'></div>
         </div>
 
-        <GraphsContainer />
+        <GraphsContainer items={progressGraph}/>
         <CompletedEventsContainer items={events}/>
 
 
