@@ -31,8 +31,7 @@ export function Statistics() {
         </div>
 
         <GraphsContainer items={progressGraph}/>
-        {/* <CompletedEventsContainer items={events}/> */}
-        <EventContainer items={events} />
+        <CompletedEventsContainer items={events}/>
 
 
         <Footer />
