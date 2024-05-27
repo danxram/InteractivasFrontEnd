@@ -11,7 +11,7 @@ import { EventContainer } from '../activity/EventContainer';
 export function Statistics() {
 
     const progressGraph = [
-        {'id':1, 'progressNumber':55}
+        {'id':1, 'progressNumber':55, 'eventDoneToday': 3, 'eventDoneWeek': 15}
     ]
 
     const events = [
