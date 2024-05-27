@@ -32,7 +32,7 @@ export function CardEvent({ imageEvent, date, eventName, description, type }) {
                 <p className="font-main text-base font-medium mx-6 text-[#426B9A]">{description}</p>
             </div>
             <div className="flex justify-center mb-6">
-                <NavLink to="/details" className="font-main text-4xl font-bold py-5 px-10 2xl:px-24 bg-[#C94545] rounded-lg text-[#ffffff]" href="">View More</NavLink>
+                <NavLink to="/details" className="font-main text-3xl font-bold py-5 px-10 bg-[#C94545] rounded-lg text-[#ffffff]" href="">View More</NavLink>
             </div>
         </div>
 
