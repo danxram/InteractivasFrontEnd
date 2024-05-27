@@ -26,7 +26,7 @@ export function Statistics() {
 
         <div className='flex flex-col w-3/4 m-auto py-9'>
                 <h1 className='text-[#274F7E] font-bold mx-auto max-sm:text-5xl sm:text-6xl'>COURSE STATISTICS</h1>
-                <div className='bg-gray-300 w-full h-1'></div>
+                
         </div>
 
         <GraphsContainer items={progressGraph}/>
