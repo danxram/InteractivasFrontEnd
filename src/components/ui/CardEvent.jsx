@@ -28,11 +28,11 @@ export function CardEvent({imageEvent, date, eventName, description, type}) {
                 </div>
             </div>
             <div className="my-5">
-                <p className="font-main text-4xl font-bold mx-6 text-[#426B9A]">{eventName}</p>
+                <p className="font-main text-3xl font-bold mx-6 text-[#426B9A]">{eventName}</p>
                 <p className="font-main text-base font-medium mx-6 text-[#426B9A]">{description}</p>
             </div>
             <div className="flex justify-center mb-6">
-                <NavLink to="/details" className="font-main text-4xl font-bold py-5 px-10 xl:px- 2xl:px-24 bg-[#C94545] rounded-lg text-[#ffffff]" href="">View More</NavLink>
+                <NavLink to="/details" className="font-main text-2xl font-bold py-4 px-8 xl:px- 2xl:px-24 bg-[#C94545] rounded-lg text-[#ffffff]" href="">View More</NavLink>
             </div>
         </div>
 
