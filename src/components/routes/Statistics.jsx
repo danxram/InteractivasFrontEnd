@@ -11,7 +11,7 @@ import { EventContainer } from '../activity/EventContainer';
 export function Statistics() {
 
     const progressGraph = [
-        {'id':1, 'progressNumber':55}
+        {'id':1, 'progressNumber':55, 'eventDoneToday': 3, 'eventDoneWeek': 15}
     ]
 
     const events = [
@@ -27,12 +27,11 @@ export function Statistics() {
 
         <div className='flex flex-col w-3/4 m-auto py-9'>
                 <h1 className='text-[#274F7E] font-bold mx-auto max-sm:text-5xl sm:text-6xl'>COURSE STATISTICS</h1>
-                <div className='bg-gray-300 w-full h-1'></div>
+                
         </div>
 
         <GraphsContainer items={progressGraph}/>
-        {/* <CompletedEventsContainer items={events}/> */}
-        <EventContainer items={events} />
+        <CompletedEventsContainer items={events}/>
 
 
         <Footer />
