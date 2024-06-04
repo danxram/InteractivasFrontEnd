@@ -21,7 +21,7 @@ function App() {
 
 
   return (
-    <div >
+    <div>
 
     <Routes>
 
@@ -33,11 +33,10 @@ function App() {
       <Route path='/searchResult' element={<SearchResult/>} />
       <Route path="/courseEvents" element={<CourseEvents/>} />
       <Route path='/details' element={<Details/>} />
-      
-      <Route path='/userprofile' element={<UserProfile/>} />
-      
+      <Route path='/userprofile' element={<UserProfile/>} />      
       <Route path='/statistics' element={<Statistics/>} />
 
+      <Route path="/*" element={ <Navigate to="/homePage"/>} />
     </Routes>
   
     </div>
