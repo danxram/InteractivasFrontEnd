@@ -3,19 +3,23 @@ import { Header } from "../ui/Header";
 import { Footer } from "../ui/Footer";
 import { EventContainer } from "../activity/EventContainer.jsx";
 import { NavLink } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
 
 
 export function CourseEvents() {
     const [activeButton, setActiveButton] = useState('ALL');
 
-    const events = [
-        { "id": 1, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description: "Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date: "22/02/24" },
-        { "id": 2, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description: "Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date: "22/02/24" },
-        { "id": 3, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description: "Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date: "22/02/24" },
-        { "id": 4, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description: "Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date: "22/02/24" },
-        { "id": 5, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description: "Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date: "22/02/24" },
-        { "id": 6, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description: "Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date: "22/02/24" },
-    ];
+    const {id}=useParams();
+
+    // const events = [
+    //     { "id": 1, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description: "Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date: "22/02/24" },
+    //     { "id": 2, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description: "Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date: "22/02/24" },
+    //     { "id": 3, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description: "Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date: "22/02/24" },
+    //     { "id": 4, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description: "Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date: "22/02/24" },
+    //     { "id": 5, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description: "Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date: "22/02/24" },
+    //     { "id": 6, "eventName": "Event", "imageEvent": "https://th.bing.com/th/id/OIP.hSXNqQe1qgQd8-sq8KqkWAHaFj?rs=1&pid=ImgDetMain", description: "Lorem ipsum dolor sit amet consectetur. Pharetra nisl nibh aliquet convallis enim nisi...", type: "Task", date: "22/02/24" },
+    // ];
 
     const buttons = [
         { label: 'ALL' },
@@ -55,7 +59,7 @@ export function CourseEvents() {
                             EVENT OVERVIEW
                         </h3>
                     </div>
-                    <EventContainer items={events} />
+                    <EventContainer id={id}/>
                     <div className="flex justify-center mb-6 sm:mb-14">
                         <a className="font-main text-4xl font-bold py-5 px-10 xl:px-24 bg-[#0F345F] rounded-lg text-[#ffffff]" href="">
                             Show More

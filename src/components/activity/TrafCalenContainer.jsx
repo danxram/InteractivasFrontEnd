@@ -5,8 +5,13 @@ import * as React from 'react';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
+import { useFetchEvents } from "../hooks/useFetchEvents";
 
-export function TrafCalenContainer({ items }) {
+export function TrafCalenContainer({ id }) {
+
+    const { data } = useFetchEvents(id);
+    const {trafics}= data;
+    console.log(trafics);
     return (
 
         <>
@@ -15,7 +20,14 @@ export function TrafCalenContainer({ items }) {
                     {/*Esta es la seccion semaforo*/}
                     <div className="flex flex-col gap-3 md:w-2/4 ">
                         <h1 className="text-[#0F345F] font-main font-bold text-3xl tracking-widest pb-3 sm:pb-6 text-center">UPCOMING EVENTS</h1>
-                        {items.map(item => <EventTraffic key={item.id} eventName={item.eventName} description={item.description} borderColor={item.borderColor} />)}
+                        {trafics.map(trafic => 
+                        <EventTraffic 
+                        key={trafic.id}
+                        id={trafic.id}
+                        traficName={trafic.name} 
+                        description={trafic.description}
+                         borderColor={trafic.status} 
+                         />)}
                     </div>
                     {/*Esta es la seccion calendar*/}
                     <div className="flex flex-col gap-3  md:w-2/4 ">

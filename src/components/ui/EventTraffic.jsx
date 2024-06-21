@@ -1,17 +1,26 @@
+import { NavLink } from "react-router-dom";
 import "../../index.css";
 import PropTypes from "prop-types";
 
-export function EventTraffic({ eventName, description, borderColor }) {
+export function EventTraffic({id, key, traficName, description, borderColor }) {
+
+    if (borderColor == 1) {
+        borderColor = "#70C636";
+    } else if (borderColor == 2) {
+        borderColor = "#E8D124";
+    } else if (borderColor == 3) {
+        borderColor = "#EF5350";
+    }
     return (
         <div 
             className="flex flex-row gap-2 px-5 2xl:px-10 py-2 border-solid border-2 border-l-8 border-[#0F345F]"
-            style={{ borderColor: `#0F345F ${borderColor}` }}
+            style={{ borderColor: `${borderColor}` }}
         >
-            <div className="flex flex-col">
-                <p className="text-[#0F345F] font-main font-bold text-xl tracking-normal">{eventName}</p>
+            <div key={key} className="flex flex-col">
+                <p className="text-[#0F345F] font-main font-bold text-xl tracking-normal">{traficName}</p>
                 <p className="text-[#0F345F] font-main font-medium text-lg tracking-normal">{description}</p>
             </div>
-            <a className="flex justify-center" href="">
+            <NavLink to={`/details/${id}`} className="flex justify-center" href="">
                 <svg
                     className="w-9 h-auto"
                     xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +31,7 @@ export function EventTraffic({ eventName, description, borderColor }) {
                 >
                     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>
-            </a>
+            </NavLink>
         </div>
     );
 }
