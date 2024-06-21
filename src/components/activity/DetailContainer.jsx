@@ -1,12 +1,28 @@
 import "../../index.css";
 import { DetailEvent } from "../ui/DetailEvent";
+import { useFetchDetails } from "../hooks/useFetchDetails";
 
+export function DetailContainer({id}) {
+    const { data, loading, error } = useFetchDetails(id);
+    console.log(id)
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error.message}</div>;
 
-export function DetailContainer({ items }) {
+    
 
     return (
         <>
-            {items.map(item => <DetailEvent key={item.id} eventName={item.eventName} imageEvent={item.imageEvent} date={item.date} description={item.description} type={item.type} hour={item.hour} mode={item.mode} group={item.group} status={item.status} />)}
+                <DetailEvent 
+                    key={data.id} 
+                    eventName={data.name} 
+                    imageEvent={data.image} 
+                    date={data.date} 
+                    description={data.description}
+                    categorie={data.categories_id}
+                    hour={data.time}
+                    time={data.time}  
+                    status={data.status} 
+                />
         </>
-    )
+    );
 }

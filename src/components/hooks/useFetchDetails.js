@@ -1,18 +1,23 @@
 import { useEffect, useState } from "react";
 
-export const useFetchCourses = () => {
-    const [data, setData] = useState([]);
+export const useFetchDetails = (id) => {
+    const [data, setData] = useState(null); 
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    
 
     const getData = async () => {
         try {
-            const response = await fetch('http://interactivasbackend.test/api/courses/2');
+            setLoading(true);
+            setError(null);
+            
+            const response = await fetch(`http://interactivasbackend.test/api/details/${id}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            const data = await response.json();
-            setData(data);
+
+            const jsonData = await response.json();
+            setData(jsonData);
         } catch (error) {
             setError(error);
         } finally {
@@ -21,9 +26,12 @@ export const useFetchCourses = () => {
     };
 
     useEffect(() => {
-        getData();
-    }, []);
-    console.log(data)
+        if (id) {
+            getData();
+        }
+    }, [id]);
+
+     console.log(data); 
 
     return { data, loading, error };
 };
