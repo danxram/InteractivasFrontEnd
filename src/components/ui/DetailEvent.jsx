@@ -13,19 +13,15 @@ export function DetailEvent({ eventName, imageEvent, time, hour, group, status, 
         categorie = "Notice";
     }
 
-    if (status == 1) {
-        status = "Pending";
-        mode = "Active";
-        bgMode = "#70C636";
-    } else if (status == 2) {
+    if (status == 0) {
         status = "Approved";
         mode = "Done";
         bgMode = "#70C636";
-    } else if (status == 3) {
-        status = "Rejected";
-        mode = "Inactive";
-        bgMode = "#EF5350";
-    }
+    } else if (status == 1) {
+        status = "Pending";
+        mode = "Active";
+        bgMode = "#E2C44B";
+    } 
 
     return (
         <div className="flex flex-wrap lg:flex-nowrap p-10 bg-white m-5 rounded-2xl border border-[#274F7E] ff-main">

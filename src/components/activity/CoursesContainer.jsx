@@ -3,9 +3,9 @@ import { CardCourse } from "../ui/CardCourse";
 import { useFetchCourses } from "../hooks/useFetchCourses";
 
 
-export function CoursesContainer() {
+export function CoursesContainer({id}) {
 
-    const { data: items } = useFetchCourses();
+    const { data: items } = useFetchCourses(id);
 
     return (
         <>
@@ -17,6 +17,7 @@ export function CoursesContainer() {
                 {items.map(item => (
                     <CardCourse
                         key={item.id}
+                        id={item.id}
                         imageCourse={item.image}
                         titleCourse={item.name}
                     />

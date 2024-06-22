@@ -14,9 +14,9 @@ export function CardEvent({id, imageEvent, date, eventName, description, categor
     }
 
     if (status == 0) {
-        status = "Pending";
+        status = "completed";
     } else if (status == 1) {
-        status = "Completed";
+        status = "Pending";
     } 
     
     
