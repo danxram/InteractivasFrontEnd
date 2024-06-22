@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 export function EventTraffic({id, key, traficName, description, borderColor }) {
 
     if (borderColor == 1) {
-        borderColor = "#70C636";
+        borderColor = "#EF5350";
     } else if (borderColor == 2) {
         borderColor = "#E8D124";
     } else if (borderColor == 3) {

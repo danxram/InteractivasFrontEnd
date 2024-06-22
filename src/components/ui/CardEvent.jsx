@@ -13,13 +13,11 @@ export function CardEvent({id, imageEvent, date, eventName, description, categor
         categorie = "Notice";
     }
 
-    if (status == 1) {
+    if (status == 0) {
         status = "Pending";
-    } else if (status == 2) {
-        status = "Approved";
-    } else if (status == 3) {
-        status = "Rejected";
-    }
+    } else if (status == 1) {
+        status = "Completed";
+    } 
     
     
 
