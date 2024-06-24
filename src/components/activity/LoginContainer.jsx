@@ -1,25 +1,19 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from '../hooks/useAuth';
 
 import '../../index.css';
 
 
 export function LoginContainer() {
 
-    const [userId, setUserId] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-    const navigate = useNavigate();
+    const { login, error, loading } = useAuth();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (userId && password) {
-            // Navigate to homepage if form is valid
-            navigate("/homePage");
-        } else {
-            // Set error message if form is incomplete
-            setError('Please fill out all fields.');
-        }
+        await login(email, password);
     };
 
 
@@ -48,13 +42,13 @@ export function LoginContainer() {
                                     </svg>
                                 </div>
                                 <input
-                                    type="text"
-                                    id="user_id"
-                                    name="user_id"
-                                    placeholder="USER ID"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Email Address" 
                                     className="text-xl ff-main w-[65%] md:w-[48%] px-4 py-4 rounded-r-md focus:outline-none bg-white border-[#969696] border-solid border-y-2 border-r-2 hover:w-[67%] hover:md:w-[52%] duration-700 text-black"
-                                    value={userId}
-                                    onChange={(e) => setUserId(e.target.value)}
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     required
                                 />
                             </div>
@@ -83,6 +77,7 @@ export function LoginContainer() {
                             
                             <button
                                 type="submit"
+                                disabled={loading}
                                 className="w-[48%] py-4 mt-3 bg-[#C94545] mb-10 text-white font-medium text-2xl rounded-md hover:bg-[#C94545]/90 hover:text-white transition duration-300"
                                 >
                                 Log In
