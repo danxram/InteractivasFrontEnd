@@ -11,7 +11,7 @@ import { CourseEventsContainer } from '../activity/CourseEventsContainer.jsx';
 export function CourseEvents() {
     
 
-    const {courseId, userId}=useParams();
+    const {courseId}=useParams();
 
     
 
@@ -20,7 +20,7 @@ export function CourseEvents() {
     return (
         <div className="bg-white">
             <Header />
-            <CourseEventsContainer courseId={courseId} userId={userId} fetchType="course" />
+            <CourseEventsContainer courseId={courseId} fetchType="course" />
             <Footer />
             
         </div>

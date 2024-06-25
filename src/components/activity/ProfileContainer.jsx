@@ -1,7 +1,7 @@
 import "../../index.css";
 import { useFetchUserProfile } from "../hooks/useFetchUserProfile";
 import { CardEvent } from "../ui/CardEvent";
-//import { Profile } from "../ui/Profile";
+import { Profile } from "../ui/ProfileUser";
 
 export function ProfileContainer({ id }) {
 

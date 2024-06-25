@@ -3,12 +3,12 @@ import { CardEvent } from "../ui/CardEvent";
 import { useFetchEvents } from "../hooks/useFetchEvents";
 import { useFetchCourseEvents } from "../hooks/useFetchCourseEvents";
 
-export function EventContainer({ id, courseId, userId, fetchType }) {
+export function EventContainer({ id, courseId, fetchType }) {
     let data, loading, error;
     let eventos = [];
 
     if (fetchType === "course") {
-        ({ data, loading, error } = useFetchCourseEvents(courseId, userId));
+        ({ data, loading, error } = useFetchCourseEvents(courseId));
         eventos = data;
     } else {
         ({ data, loading, error } = useFetchEvents(id));

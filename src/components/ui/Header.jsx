@@ -8,7 +8,11 @@ import { Button, Drawer } from 'keep-react'
 export function Header() {
     const [isOpen, setIsOpen] = useState(false)
     const [position, setPosition] = useState('bottom')
-
+    const user = JSON.parse(localStorage.getItem('user'));
+    const userId = user ? user.id : null;
+    console.log(userId);
+    
+    
     return (
         <header>
             <nav className="flex bg-[#0F345F] w-full h-[10vh] lg:h-[12vh] pt-6 pb-6 justify-between items-center">
@@ -34,9 +38,9 @@ export function Header() {
                                 <h2 className='text-2xl lg:text-3xl'>Menu</h2>
                             </div>
                             <input type="search" placeholder="Search" className="bg-white text-black border border-gray-500 rounded-xl pl-4 py-2" />
-                            <NavLink className="text-[#274F7E] font-second" to={"/courses"}>Subjects</NavLink>
-                            <NavLink className="text-[#274F7E] font-second" to={"/homePage"}>Calendar</NavLink>
-                            <NavLink className="text-[#274F7E] font-second" to={"/userprofile"}>User Profile</NavLink>
+                            <NavLink className="text-[#274F7E] font-second" to={`/courses/${userId}`}>Subjects</NavLink>
+                            <NavLink className="text-[#274F7E] font-second" to={`/homePage/${userId}`}>Calendar</NavLink>
+                            <NavLink className="text-[#274F7E] font-second" to={`/userprofile/${userId}`}>User Profile</NavLink>
                             <NavLink className="text-[#274F7E] font-second" to={"/"}>Log Out</NavLink>
                             <Button onClick={() => setIsOpen(false)} className="bg-[#C94545] hover:bg-[#C94545]/90 text-white mt-4 py-2 px-4 lg:py-3 lg:px-6" color="secondary">
                                 Go Back

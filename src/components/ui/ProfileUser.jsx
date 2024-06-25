@@ -2,8 +2,13 @@ import '../../index.css';
 import PropTypes from 'prop-types';
 
 
-export function Profile({id, userPfp, username, userType, userEmail, userJoined}) {
-
+export function Profile({id, userPfp, username, userType, userEmail, userEnjoined}) {
+   
+if(userType === 2){
+    userType = 'Student';
+}else if(userType === 1){
+    userType = 'Admin';
+}
 
     return (
         <div key={id} className='flex flex-col w-auto h-full min-h-screen justify-center mt-5'>
@@ -26,7 +31,7 @@ export function Profile({id, userPfp, username, userType, userEmail, userJoined}
             <div className='flex max-md:flex-col md:flex-row items-center gap-16 py-8'>
                 <div className='w-1/3'>
                     <p className='text-[#426B9A]'>Joined:</p>
-                    <p className='text-[#535353] py-2.5'>{userJoined}</p>
+                    <p className='text-[#535353] py-2.5'>{userEnjoined}</p>
                 </div>
                 <div className='w-1/3'>
                     <p className='text-[#426B9A]'>Bio:</p>

@@ -10,7 +10,7 @@ export const useAuth = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://interactivasbk.test/api/login', {
+      const response = await fetch('http://interactivasbackend.test/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -27,8 +27,10 @@ export const useAuth = () => {
       
       localStorage.setItem('token', data.accessToken);
       localStorage.setItem('user', JSON.stringify(data.user));
-
-      navigate('/homePage'); // Navigate to homepage on successful login
+      
+      const userId = data.user.id; // Obtener el ID del usuario de data.user
+      
+      navigate(`/homePage/${userId}`); // Navigate to homepage on successful login
     } catch (err) {
       setError(err.message);
     } finally {

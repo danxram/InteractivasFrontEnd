@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { EventContainer } from './EventContainer';
 import { NavLink } from 'react-router-dom';
 
-export const CourseEventsContainer = ({ courseId, userId, fetchType }) => {
+export const CourseEventsContainer = ({ courseId, fetchType }) => {
     const buttons = [
         { label: 'ALL' },
         { label: 'TASK' },
@@ -43,7 +43,7 @@ export const CourseEventsContainer = ({ courseId, userId, fetchType }) => {
                             EVENT OVERVIEW
                         </h3>
                     </div>
-                    <EventContainer courseId={courseId} userId={userId} fetchType={fetchType} />
+                    <EventContainer courseId={courseId} fetchType={fetchType} />
                     <div className="flex justify-center mb-6 sm:mb-14">
                         <a className="font-main text-4xl font-bold py-5 px-10 xl:px-24 bg-[#0F345F] rounded-lg text-[#ffffff]" href="">
                             Show More
