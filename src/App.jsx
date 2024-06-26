@@ -33,7 +33,7 @@ function App() {
       <Route path='/searchResult' element={<SearchResult/>} />
       <Route path="/courseEvents/:courseId" element={<CourseEvents/>} />
       <Route path='/details/:id' element={<Details/>} />
-      <Route path='/userprofile/:id' element={<UserProfile/>} />      
+      <Route path='/userprofile/:id' element={<UserProfile/>} />
       <Route path='/statistics' element={<Statistics/>} />
 
       <Route path="/*" element={ <Navigate to="/homePage"/>} />
