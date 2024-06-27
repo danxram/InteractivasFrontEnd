@@ -18,7 +18,7 @@ export function Header() {
     return (
         <header>
             <nav className="flex bg-[#0F345F] w-full h-[10vh] lg:h-[12vh] pt-6 pb-6 justify-between items-center">
-                <NavLink to={'/homePage'}><img className="pl-9 h-[4vh] lg:h-[6vh] object-contain" src={logo} alt="Logo Event Mate" /></NavLink>
+                <NavLink to={`/homePage/${userId}`}><img className="pl-9 h-[4vh] lg:h-[6vh] object-contain" src={logo} alt="Logo Event Mate" /></NavLink>
                 <div className="flex items-center gap-3 mr-9">
                     {['right'].map((position) => (
                         <Button
