@@ -4,12 +4,14 @@ import { NavLink } from 'react-router-dom';
 import { Divider, Dropdown } from 'keep-react'
 import { useState } from 'react'
 import { Button, Drawer } from 'keep-react'
+import { useLogout } from '../hooks/useLogout';
 
 export function Header() {
     const [isOpen, setIsOpen] = useState(false)
     const [position, setPosition] = useState('bottom')
     const user = JSON.parse(localStorage.getItem('user'));
     const userId = user ? user.id : null;
+    const { logout } = useLogout();
     console.log(userId);
     
     
@@ -41,7 +43,7 @@ export function Header() {
                             <NavLink className="text-[#274F7E] font-second" to={`/courses/${userId}`}>Subjects</NavLink>
                             <NavLink className="text-[#274F7E] font-second" to={`/homePage/${userId}`}>Calendar</NavLink>
                             <NavLink className="text-[#274F7E] font-second" to={`/userprofile/${userId}`}>User Profile</NavLink>
-                            <NavLink className="text-[#274F7E] font-second" to={`/logout/${userId}`}>Log Out</NavLink>
+                            <NavLink className="text-[#274F7E] font-second" to={`/`} onClick={logout} >Log Out</NavLink>
                             <Button onClick={() => setIsOpen(false)} className="bg-[#C94545] hover:bg-[#C94545]/90 text-white mt-4 py-2 px-4 lg:py-3 lg:px-6" color="secondary">
                                 Go Back
                             </Button>
