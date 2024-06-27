@@ -38,6 +38,7 @@ export function EventContainer({ id, courseId, fetchType }) {
                     />
                 ))}
             </section>
+            
         </>
     );
 }
