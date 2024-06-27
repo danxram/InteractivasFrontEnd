@@ -41,7 +41,7 @@ export function Header() {
                             <NavLink className="text-[#274F7E] font-second" to={`/courses/${userId}`}>Subjects</NavLink>
                             <NavLink className="text-[#274F7E] font-second" to={`/homePage/${userId}`}>Calendar</NavLink>
                             <NavLink className="text-[#274F7E] font-second" to={`/userprofile/${userId}`}>User Profile</NavLink>
-                            <NavLink className="text-[#274F7E] font-second" to={"/"}>Log Out</NavLink>
+                            <NavLink className="text-[#274F7E] font-second" to={`/logout/${userId}`}>Log Out</NavLink>
                             <Button onClick={() => setIsOpen(false)} className="bg-[#C94545] hover:bg-[#C94545]/90 text-white mt-4 py-2 px-4 lg:py-3 lg:px-6" color="secondary">
                                 Go Back
                             </Button>

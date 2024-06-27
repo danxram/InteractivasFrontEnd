@@ -9,7 +9,7 @@ export const useUserProfile = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://interactivasbk.test/api/user-profile', {
+      const response = await fetch('http://interactivasbackend.test/api/user-profile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

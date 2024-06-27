@@ -10,7 +10,7 @@ export const useSignup = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://interactivasbk.test/api/signup', {
+      const response = await fetch('http://interactivasbackend.test/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -22,9 +22,11 @@ export const useSignup = () => {
         const errorData = await response.json();
         throw new Error(errorData.message || 'Signup failed');
       }
-
       const data = await response.json();
-      navigate('/formsInfo'); // Navigate to the form page on successful signup
+
+      
+      
+      navigate(`/homePage/${data.user.id}`); // Navigate to the form page on successful signup
     } catch (err) {
       setError(err.message);
     } finally {
